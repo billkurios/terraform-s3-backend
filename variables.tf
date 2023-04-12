@@ -6,8 +6,8 @@ variable "bucket_name" {
 
 variable "aws_current_user_id" {
   description = "User Id of the terraform user"
-  type = string
-  default = "user"
+  type        = string
+  default     = "user"
 }
 
 variable "tf_state_path_key" {

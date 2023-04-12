@@ -1,0 +1,5 @@
+bucket         = "genese-terraform-states"
+dynamodb_table = "terraform-states-locking"
+profile        = "ruach"
+region         = "us-east-1"
+key            = "global/s3-backend/terraform.tfstate"
