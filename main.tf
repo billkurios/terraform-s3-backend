@@ -27,8 +27,6 @@ data "aws_iam_policy_document" "tf_states_policy" {
   }
 }
 
-data "aws_caller_identity" "current" {}
-
 resource "aws_iam_policy" "tf_states_policy" {
   name        = var.bucket_policy
   description = "${var.bucket_name} policy."
@@ -37,7 +35,7 @@ resource "aws_iam_policy" "tf_states_policy" {
 
 resource "aws_iam_policy_attachment" "policy_current_user_attachment" {
   name       = "${var.bucket_policy}-attachment"
-  users      = [data.aws_caller_identity.current.user_id]
+  users      = [var.aws_current_user_id]
   policy_arn = aws_iam_policy.tf_states_policy.arn
 }
 

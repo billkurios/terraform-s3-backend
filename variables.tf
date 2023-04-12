@@ -4,6 +4,12 @@ variable "bucket_name" {
   default     = "terraform-states"
 }
 
+variable "aws_current_user_id" {
+  description = "User Id of the terraform user"
+  type = string
+  default = "user"
+}
+
 variable "tf_state_path_key" {
   description = "Terraform state path key in the s3 terraform states bucket"
   type        = string
