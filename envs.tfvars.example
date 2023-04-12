@@ -1,0 +1,8 @@
+bucket_name = "genese-terraform-states"
+aws_profile = "ruach"
+tf_state_path_key = "global/s3-backend/terraform.tfstate"
+bucket_policy = "terraform-states-policy"
+terrafom_db_table_name = "terraform-states-locking"
+table_lock_id = "LockID"
+aws_region = "us-east-1"
+aws_current_user_id = "admin"
